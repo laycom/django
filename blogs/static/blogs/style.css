@@ -1,0 +1,30 @@
+.main-content {
+    margin-top: 60px;
+}
+
+.content {
+    margin-top: 60px;
+    margin-left: 30px;
+}
+
+.covid {
+    height: 200px;
+    padding-right: 16px;
+    width: 1000px;
+    margin-bottom: 32px;
+}
+
+.covid-schedule {
+    height: 300px;
+    padding-right: 16px;
+    width: 1000px;
+    margin-bottom: 32px;
+}
+
+.general-container {
+}
+
+.covid-back {
+
+}
+
