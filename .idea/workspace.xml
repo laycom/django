@@ -1,7 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0951b988-9778-48e0-b441-064b8411ec57" name="Default Changelist" comment="" />
+    <list default="true" id="0951b988-9778-48e0-b441-064b8411ec57" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/landing/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogs/static/blogs/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/blogs/static/blogs/style_blog.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogs/templates/blogs/base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogs/templates/blogs/covid.html" beforeDir="false" afterPath="$PROJECT_DIR$/blogs/templates/blogs/covid.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogs/templates/blogs/description.html" beforeDir="false" afterPath="$PROJECT_DIR$/blogs/templates/blogs/description.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogs/templates/blogs/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogs/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/blogs/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blogs/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blogs/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home_image.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing/static/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing/templates/landing/base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing/templates/landing/landing.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing/templates/landing/shop.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/landing/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/landing/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/landing/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myblog/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/myblog/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myblog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/myblog/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/orders/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/media/products_images/MKTQ2_image_01_4Dbz4F7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/media/products_images/MKTQ2_image_02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/media/products_images/MKTQ2_image_02_yIXPcSc.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/media/products_images/iphone_7_black-image_02_eMhZq62_0VXKTD6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/media/products_images/iphone_7_jet_black-image_01_U5CakOv_NSLr7lC.jpg" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,12 +38,16 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1bLX26RHqlERELYSiwX5tNBpC64" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -24,15 +56,16 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/static" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projects_django\myblog\templates" />
       <recent name="D:\Projects_django\myblog\static" />
       <recent name="D:\Projects_django\myblog\products" />
       <recent name="D:\Projects_django\myblog\orders" />
       <recent name="D:\Projects_django\myblog\blogs\static\blogs" />
-      <recent name="D:\Projects_django\myblog\landing\static\blogs\img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Projects_django\myblog" />
@@ -55,5 +88,24 @@
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="492" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588933099750">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="492" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1588933099750" />
   </component>
 </project>

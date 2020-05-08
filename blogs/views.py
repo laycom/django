@@ -1,13 +1,5 @@
 from django.shortcuts import render
-from blogs.models import Blog, User
-
-
-def show_blog(request):
-    user = User.objects.get()
-    content = {
-        'user': user,
-    }
-    return render(request, 'blogs/home.html', content)
+from blogs.models import Blog
 
 
 def show_description(request):

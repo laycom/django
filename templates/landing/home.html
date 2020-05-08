@@ -1,0 +1,32 @@
+{% extends 'base_shop.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="section-top">
+        <img src="{% static 'img/laycom_image1.jpg' %}" class="image-laycom">
+    </div>
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                {% for product_image in product_images %}
+                     <div class="col-md-3">
+                         <div class="product-item">
+                            <div>
+                               <img src="{{ product_image.image.url }}" class="product-item-img">
+                            </div>
+                             <div class="product-item-text">
+                                 <h6>{{ product_image.product.name }}</h6>
+                                 <h6>{{ product_image.product.price }} RUB</h6>
+                             </div>
+                            <div class="add-to-cart-btn">
+                                <button class="btn btn-success">
+                                    Добавить в корзину
+                                </button>
+                            </div>
+                          </div>
+                     </div>
+                {%endfor%}
+            </div>
+        </div>
+    </div>
+{% endblock %}
