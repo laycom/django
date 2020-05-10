@@ -1,0 +1,17 @@
+{% extends 'base_shop.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container container-product">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center">Все товары</h1>
+            </div>
+            {% for product_image in product_images %}
+                {% include 'landing/product_item.html' %}
+            {% endfor %}
+        </div>
+    </div>
+
+
+{% endblock %}

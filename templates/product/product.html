@@ -1,0 +1,81 @@
+{% extends 'base_shop.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container container-product">
+        <div class="row">
+            <div class="col-md-6">
+                {% for image in product.productimage_set.all %}
+                <div class="product-image">
+                    <img src="{{ image.image.url }}" class="img-fluid">
+                </div>
+
+                {% endfor %}
+            </div>
+            <div class="col-md-6">
+                <h1 class="text-center">
+                    {{ product.name }}
+                </h1>
+                <div class="">
+                    <p class="">
+                        Price: {{ product.price }} RUB
+                    </p>
+                </div>
+                <div class="">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="description-tab" data-toggle="tab" href="#description"
+                               role="tab" aria-controls="description" aria-selected="true">Описание</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="delivery-tab" data-toggle="tab" href="#delivery"
+                               role="tab" aria-controls="delivery" aria-selected="false">Доставка</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact"
+                               role="tab" aria-controls="contact" aria-selected="false">Контакты</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content product-tabs" id="myTabContent">
+                        <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
+                            {{ product.description }}
+                        </div>
+                        <div class="tab-pane fade" id="delivery" role="tabpanel" aria-labelledby="delivery-tab">
+                            <p>
+                                Оплата по налу/безналу. Доставка по России. Гарантия сохранности. Отслеживание курьера.
+                                Выезд на любой адрес через 5 мин. Выгодные предложения. Отправить заявку онлайн!
+                                Без договоров. Более 17 000 курьеров. Безналичный расчет. Работаем 24/7.
+                            </p>
+                        </div>
+                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                            <p>
+                                Адрес
+                                Тушинская
+                                ул. Тушинская, д.17 - Торговый центр «Праздник», 3-й этаж
+                                График работы
+                                с 10:00 до 20:00 (ежедневно)
+                                Срок хранения товара
+                                Срок хранения товара составляет два рабочих дня.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="">
+                        <form id="form_buying_product" class="form-inline">
+                            <div class="form-group">
+                                <input type="number" class="form-control" id="number" min="0" step="1">
+                            </div>
+                            <div class="form-group">
+                                <button type='submit' id='submit_btn' class="btn btn-success btn-buy"
+                                    data-product_id = '{{ product.id }}'
+                                    data-product_name = '{{ product.name }}'
+                                    data-product_price = '{{ product.price }}'>
+                                    Купить
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
