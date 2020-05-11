@@ -2,16 +2,30 @@
 {% load static %}
 
 {% block content %}
-    <div class="container container-product">
-        <div class="row">
-            <div class="col-md-6">
-                {% for image in product.productimage_set.all %}
-                <div class="product-image">
-                    <img src="{{ image.image.url }}" class="img-fluid">
-                </div>
+<div class="container container-product">
+    <div class="row">
+        <div class="col-md-6">
+            <div id="block-for-slider">
+                <div id="viewport">
+                    <ul id="slidewrapper">
+                        {% for image in product.productimage_set.all %}
+                            <li class="slide"><img src="{{ image.image.url }}" alt="1" class="slide-img"></li>
+                        {% endfor %}
+                    </ul>
+                    <div id="prev-next-btns">
+                        <div id="prev-btn"></div>
+                        <div id="next-btn"></div>
+                    </div>
 
-                {% endfor %}
+                    <ul id="nav-btns">
+                        {% for image in product.productimage_set.all %}
+                            <li class="slide-nav-btn"></li>
+                        {% endfor %}
+                    </ul>
+                </div>
             </div>
+        </div>
+
             <div class="col-md-6">
                 <h1 class="text-center">
                     {{ product.name }}
@@ -60,7 +74,7 @@
                         </div>
                     </div>
                     <div class="">
-                        <form id="form_buying_product" class="form-inline">
+                        <form id="form_buying_product" class="form-inline" action="{% url 'basket_adding' %}">{% csrf_token %}
                             <div class="form-group">
                                 <input type="number" class="form-control" id="number" min="0" step="1">
                             </div>

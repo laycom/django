@@ -19,9 +19,10 @@
           <a class="nav-link" href="{% url 'responsecode' %}">Code</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Авторизация</a>
+          <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
+             aria-expanded="false">Авторизация</a>
           <div class="dropdown-menu dropdown-menu-right text-right mt-2 mt-md-0" aria-labelledby="dropdown01">
-            <a class="dropdown-item" href="#">Shop</a>
+            <a class="dropdown-item" href="{% url 'slider' %}">Slider</a>
             <a class="dropdown-item" href="#">Another action</a>
             <a class="dropdown-item" href="#">Something else here</a>
           </div>
@@ -33,11 +34,42 @@
        </ul>
     </div>
       <ul class="nav navbar-nav navbar-right">
-        <li>
+        <li class="nav-item dropdown">
           <div class="basket-container">
-            <a class="nav-link" href="">Корзина <span id="basket_total_amount"></span></a>
+            <a class="nav-link" href="">Корзина <span id="basket_total_amount"></span>
+              <span id="basket_total_nbr">
+                {% if products_total_number %}
+                  ({{products_total_number}})
+                {% else %}
+                  (0)
+                {% endif %}
+              </span></a>
             <div class="basket-items invisible">
               <ul class="">
+<!--                  <table class="table table-bordered">-->
+<!--                    <thead>-->
+<!--                    <tr>-->
+<!--                      <th scope="col">Name</th>-->
+<!--                      <th scope="col">Num</th>-->
+<!--                      <th scope="col">Price</th>-->
+<!--                    </tr>-->
+<!--                    </thead>-->
+<!--                    <tbody>-->
+<!--                    <tr>-->
+<!--                      {% for product_in_basket in products_in_basket %}-->
+<!--                        <td>{{ product_in_basket.product.name }}</td>-->
+<!--                        <td>Otto</td>-->
+<!--                        <td>{{product_in_basket.product.price}}</td>-->
+<!--                      {% endfor %}-->
+<!--                    </tr>-->
+<!--                    </tbody>-->
+<!--                  </table>-->
+                {% for product_in_basket in products_in_basket %}
+                  <li>{{ product_in_basket.product.name }}, {{ product_in_basket.nbr }} шт.
+                    {{ product_in_basket.price_per_item }} RUB
+                    <a href="", class="delete-item" data-product_id="{{ product_in_basket.id }}">x</a>
+                  </li>
+                {% endfor %}
               </ul>
             </div>
           </div>
