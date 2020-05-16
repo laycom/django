@@ -91,3 +91,10 @@ class ProductInBasket(models.Model):
         self.price_per_item = self.product.price
         self.total_price = int(self.nbr) * self.price_per_item
         super(ProductInBasket, self).save(*args, **kwargs)
+
+    def order_price(self, session_key):
+        order_price = 0
+        all_product_in_basket = self.objects.filter(session_key=session_key, is_active=True)
+        for product_in_basket in all_product_in_basket:
+            order_price += product_in_basket.total_price
+        return order_price

@@ -6,7 +6,7 @@ $(document).ready(function() {
         var data = {};
         data.product_id = product_id;
         data.nbr = nbr;
-        var csrf_token = $('#form_buying_product [name="csrfmiddlewaretoken"]').val();
+        var csrf_token = $('#token_form [name="csrfmiddlewaretoken"]').val();
         data['csrfmiddlewaretoken'] = csrf_token;
 
 
@@ -15,7 +15,8 @@ $(document).ready(function() {
         }
 
         console.log(data)
-        var url = form.attr('action');
+        var url = '/orders/basket_adding/';
+        console.log(url);
         $.ajax({
             url: url,
             type: 'POST',
@@ -59,6 +60,16 @@ $(document).ready(function() {
         e.preventDefault();
         showing_basket()
     })
+
+    $('.basket-btn').click(function(e){
+        e.preventDefault();
+        var nbr = 1;
+        var product_id = $(this).attr('data-product_id');
+        var product_name = $(this).attr('data-product_name');
+        var product_price = $(this).attr('data-product_price');
+        basketUpdate(product_id, nbr, is_delete=false)
+    })
+
 //    $('.basket-container').mouseover(function(){
 //        showing_basket()
 //    })
@@ -70,6 +81,29 @@ $(document).ready(function() {
          e.preventDefault();
          product_id = $(this).data("product_id");
          nbr = 0;
-         basketUpdate(product_id, nbr, is_delete=true)
+         basketUpdate(product_id, nbr, is_delete=true);
      })
+
+    function calculatingBasketAmount(){
+        var total_order_price = 0;
+        $('.price-for-all-product').each(function() {
+            total_order_price = total_order_price + parseFloat($(this).text());
+        });
+        $('#total-order-price').text(total_order_price);
+    };
+
+
+    $(document).on('click', '.product-in-basket-number', function(){
+        var current_number = $(this).val();
+        var current_tr = $(this).closest('tr');
+        var current_price = parseInt(current_tr.find('.product-price').text());
+        var total_price = current_number * current_price;
+        current_tr.find('.price-for-all-product').text(total_price);
+
+        calculatingBasketAmount();
+
+    });
+
+
+
 });

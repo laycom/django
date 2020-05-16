@@ -15,7 +15,10 @@
             <h6>{{ product_image.product.price }} RUB</h6>
         </div>
         <div class="add-to-cart-btn">
-            <button type='submit' class="btn btn-success">
+            <button type='submit' class="btn btn-success basket-btn" id='{{ product_image.product.id }}'
+                    data-product_id = '{{ product_image.product.id }}'
+                    data-product_name = '{{ product_image.product.name }}'
+                    data-product_price = '{{ product_image.product.price }}'>
                 Добавить в корзину
             </button>
         </div>

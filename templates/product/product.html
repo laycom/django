@@ -74,7 +74,8 @@
                         </div>
                     </div>
                     <div class="">
-                        <form id="form_buying_product" class="form-inline" action="{% url 'basket_adding' %}">{% csrf_token %}
+                        <form id="form_buying_product" class="form-inline" action="{% url 'basket_adding' %}">
+<!--                            {% csrf_token %}-->
                             <div class="form-group">
                                 <input type="number" class="form-control" id="number" min="0" step="1">
                             </div>

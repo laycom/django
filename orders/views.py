@@ -35,3 +35,16 @@ def basket_adding(request):
         products_dict['nbr'] = item.nbr
         return_dict['products'].append(products_dict)
     return JsonResponse(return_dict)
+
+
+def checkout(request):
+    if request.POST:
+        print(request.POST)
+    session_key = request.session.session_key
+    all_product_in_basket = ProductInBasket.objects.filter(session_key=session_key, is_active=True)
+    total_price = ProductInBasket.order_price(ProductInBasket, session_key)
+    content = {
+        'all_product_in_basket': all_product_in_basket,
+        'total_price': total_price,
+    }
+    return render(request, 'orders/checkout.html', content)
